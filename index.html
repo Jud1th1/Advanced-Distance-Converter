@@ -35,5 +35,57 @@
     
     <p id="directions">Press the "K" key to switch to kilometer converstion, press the "M" key to switch to mile conversion</p>
 
+	<!--<script>
+		var convertType = 'miles';
+		var heading = document.querySelector('h1');
+		var intro = document.querySelector('p');
+		var answerDiv = document.getElementById('answer');
+		var form = document.getElementById('convert');
+
+		//add 2 event listeners. One will handle the key down (when user presses k or m) and one for the submit form 
+
+		document.addEventListener('keydown', function(event){
+			var key = event.code //remember we no longer use event.which
+			
+			if(key === 'KeyK'){
+				//change the value of the convertType variable
+				convertType = 'kilometers'; //using km is also fine
+				//change the heading
+				heading.innerHTML = "Kilometers to Miles Converter";
+				//change the intro paragraph
+				intro.innerHTML = "Type in a number of kilometers and click the button to convert the distance to miles";
+			}else if(key === 'KeyM'){
+				//change the value of the convertType variable
+				convertType = 'miles'; 
+				//change the heading
+				heading.innerHTML = "Miles to Kilometer Converter";
+				//change the intro paragraph
+				intro.innerHTML = "Type in a number of miles and click the button to convert the distance to kilometers";
+			}
+		});
+
+		form.addEventListener('submit', function(event){
+			event.preventDefault();
+
+			var distance = parseFloat(document.getElementById('distance').value);
+
+			if(distance){
+				//convert Miles to Kilometers
+				if(convertType == 'miles'){
+					var converted = (distance * 1.609344).toFixed(3);
+					answer.innerHTML = `<h2> ${distance} miles converts to ${converted} kilometers </h2>`;
+				}else{
+				//convert Kilometers to Miles
+					var converted = (distance * 0.621371192).toFixed(3);
+					answer.innerHTML = `<h2> ${distance} kilometers converts to ${converted} miles </h2>`;
+				}
+
+			}else{
+				//send error message
+				answer.innerHTML = "<h2> Please provide a number </h2>";
+			}
+		});
+	</script>-->
+
 </body>
 </html>
