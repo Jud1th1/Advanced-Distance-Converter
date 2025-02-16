@@ -43,8 +43,8 @@ At the start, the code declares key variables:
 - Prevents default form submission behavior using event.preventDefault().
 - Retrieves user input, converts it to a floating-point number (parseFloat).
 - If valid, applies the appropriate conversion formula:
-- - Miles → Kilometers → distance * 1.609344
-- - Kilometers → Miles → distance * 0.621371192
+  - Miles → Kilometers → distance * 1.609344
+  - Kilometers → Miles → distance * 0.621371192
 - Uses .toFixed(3) to round the result to three decimal places.
 - Updates the answerDiv with the converted value or an error message if input is invalid.
 
