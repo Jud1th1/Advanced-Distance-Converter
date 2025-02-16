@@ -18,6 +18,7 @@ A simple web application that allows users to convert distances between miles an
 
 This project is a distance conversion tool that allows users to convert between miles and kilometers. Users can toggle the conversion type by pressing K (Kilometers to Miles) or M (Miles to Kilometers). The form prevents automatic reloading, ensuring a smooth user experience.
 
+
 ### Features
 
 ✔ Features of the converter include:
@@ -26,6 +27,7 @@ This project is a distance conversion tool that allows users to convert between 
 ✔ Prevents form from reloading using event.preventDefault()
 ✔ Input validation to ensure a number is provided
 ✔ Displays the converted value rounded to three decimal places
+
 
 ### How It Works 
 This project follows best practices, using "use strict", const, and let for variable declarations. Below is a step-by-step breakdown of how the code functions:
@@ -51,10 +53,12 @@ At the start, the code declares key variables:
 
 ![](/screenshot.png)
 
+
 ### Links
 
 - Solution URL: [https://github.com/Jud1th1/Advanced-Distance-Converter] https://github.com/Jud1th1/Advanced-Distance-Converter
-- Live Site URL: 
+- Live Site URL: [https://distanceconverter01.netlify.app/] https://distanceconverter01.netlify.app/
+
 
 ## My process
 
@@ -68,35 +72,35 @@ At the start, the code declares key variables:
 1. Declaring Variables
 At the start, we define several key variables needed for our functionality:
 
-- convertType: Tracks whether we are converting miles to kilometers or kilometers to miles (default: miles).
-- heading: Targets the <h1> element to update the title dynamically.
-- intro: Targets the <p> element for updating the conversion instructions.
-- answerDiv: Targets the <div> where the result will be displayed.
-- form: Targets the <form> element to handle user input.
+  - convertType: Tracks whether we are converting miles to kilometers or kilometers to miles (default: miles).
+  - heading: Targets the (h1) element to update the title dynamically.
+  - intro: Targets the (p) element for updating the conversion instructions.
+  - answerDiv: Targets the <div> where the result will be displayed.
+  - form: Targets the <form> element to handle user input.
 
 2. Handling Key Presses (Event Listener for Keydown)
 We add an event listener that listens for keyboard input:
 
-- If the user presses "K", we update convertType to "kilometers", change the heading to "Kilometers to Miles Converter", and update the instructions accordingly.
-- If the user presses "M", we reset convertType to "miles", update the heading to "Miles to Kilometers Converter", and adjust the instructions.
-- We use event.code to detect which key is pressed. (Note: This replaces the now-deprecated event.which.)
+  - If the user presses "K", we update convertType to "kilometers", change the heading to "Kilometers to Miles Converter", and update the instructions accordingly.
+  - If the user presses "M", we reset convertType to "miles", update the heading to "Miles to Kilometers Converter", and adjust the instructions.
+  - We use event.code to detect which key is pressed. (Note: This replaces the now-deprecated event.which.)
 
 3. Handling Form Submission (Event Listener for Submit)
 
-- We prevent the default form behavior using event.preventDefault() to stop the page from refreshing when the user submits input.
-- The user's input is retrieved using document.getElementById('distance').value and converted to a floating-point number using parseFloat(). This ensures proper calculations.
-- If a valid number is provided:
-- - If converting miles to kilometers, we multiply the value by 1.609344 and round it to three decimal places using .toFixed(3).
-- - If converting kilometers to miles, we multiply by 0.621371192 and round it similarly.
-- - The result is displayed inside answerDiv using innerHTML.
-- If the user does not enter a valid number, we display an error message prompting them to input a value.
+  - We prevent the default form behavior using event.preventDefault() to stop the page from refreshing when the user submits input.
+  - The user's input is retrieved using document.getElementById('distance').value and converted to a floating-point number using parseFloat(). This ensures proper calculations.
+  - If a valid number is provided:
+    - If converting miles to kilometers, we multiply the value by 1.609344 and round it to three decimal places using .toFixed(3).
+    - If converting kilometers to miles, we multiply by 0.621371192 and round it similarly.
+  - The result is displayed inside answerDiv using innerHTML.
+  - If the user does not enter a valid number, we display an error message prompting them to input a value.
 
 4. Testing & Refinements
 Throughout the project, we tested our functionality to ensure a smooth user experience. Some refinements included:
 
-- Adding "use strict" to enforce good coding practices.
-- Using let and const instead of var for better scoping and security.
-- Ensuring all text and elements update dynamically when toggling conversion types. 
+  - Adding "use strict" to enforce good coding practices.
+  - Using let and const instead of var for better scoping and security.
+  - Ensuring all text and elements update dynamically when toggling conversion types. 
 
 ### Key Takeaways & Learnings
 - Keyboard Events: Learned how to use event.code to trigger actions based on keypresses.
@@ -104,6 +108,7 @@ Throughout the project, we tested our functionality to ensure a smooth user expe
 - Variable Scope: Reinforced the importance of using let and const properly.
 - InnerHTML Manipulation: Dynamically updated HTML elements to provide a seamless user experience.
 - Error Handling: Implemented checks to ensure the user enters a valid number before performing calculations.
+
 
 ### Usage
 1. Type a number into the input field.
