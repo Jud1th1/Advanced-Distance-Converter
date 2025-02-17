@@ -51,7 +51,7 @@ At the start, the code declares key variables:
 
 ### Screenshot
 
-![](/screenshot.png)
+![](/Distance%20Converter.png)
 
 
 ### Links
